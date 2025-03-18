@@ -1,0 +1,40 @@
+version: '3'
+
+
+services:
+  TestROS_container:
+    container_name: alphapose-test
+    image: alphapose-cuda-ros:devel
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: 1
+            capabilities: [gpu]
+    volumes:
+      - /home/reconcycle/gsavle/TEST/test_weights:/root/catkin_ws/src/AlphaPose/detector/yolo/data
+      - /home/reconcycle/gsavle/TEST/test_model:/root/catkin_ws/src/AlphaPose/detector/tracker/data
+      - /home/reconcycle/gsavle/TEST/pret_model:/root/catkin_ws/src/AlphaPose/pretrained_models
+    command: tail -f /dev/null
+    devices:
+      - /dev/dri:/dev/dri
+
+    environment:
+      - "ROS_MASTER_URI=http://10.20.0.1:11311"
+      - "ROS_IP=10.20.0.2"
+
+      - "DISPLAY=$DISPLAY"
+      - NVIDIA_VISIBLE_DEVICES=0
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - DEBUG_COLORS=true
+      - TERM=xterm-256color
+      - COLORTERM=truecolor
+    tty: true
+    privileged: true
+    network_mode: "host"
+
+
+
+
+  
