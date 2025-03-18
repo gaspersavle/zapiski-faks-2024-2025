@@ -1,0 +1,42 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{booktabs} % Example of additional packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{makecell}
+\begin{document}
+\begin{table}[H]
+\caption{Statistična analiza besedila 'Na klancu'} \label{tab_na_klancu}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    \multicolumn{3}{|c|}{Na klancu} \\
+    \hline
+    Pogostost & Beseda & Frekvenca\\
+    \hline
+    \multirow{5}{*}{Najpogostejše} & , & 5899\\
+                         & je   & 5699 \\
+                         & in   & 2941 \\
+                         & .   & 2211 \\
+                         & se   & 2101 \\
+    \hline
+    \multirow{5}{*}{Najredkejše} & učiteljevo & 1 \\
+                         & iskra   & 1 \\
+                         & plapolajoča   & 1 \\
+                         & vžigalo   & 1 \\
+                         & prižigale  & 1 \\
+    \hline
+    \multicolumn{3}{|c|}{Najbližje geometrični sredini}\\
+    \hline
+    Beseda & \multicolumn{2}{|c|}{Verjetnost} \\
+    \hline
+    je & \multicolumn{2}{|c|}{0.08209} \\
+    \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}
