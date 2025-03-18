@@ -1,0 +1,7 @@
+UTF-8 je eden izmed načinov kodiranja mednarodnega nabora znakov unicode, pri katerem znaki ASCII ostanejo enozložni, ostali znaki pa lahko zasedajo več zlogov.
+
+UTF-8（8-bit Unicode Transformation Format）是一種針對Unicode的可變長度字元編碼，也是一种前缀码。
+
+UTF-8은 유니코드를 위한 가변 길이 문자 인코딩 방식 중 하나로, 켄 톰프슨과 롭 파이크가 만들었다.
+
+Το UTF-8 (8-bit Unicode Transformation Format) είναι ένα μη-απωλεστικό σχήμα κωδικοποίησης χαρακτήρων μεταβλητού μήκους για το πρότυπο Unicode που δημιουργήθηκε από τους Ken Thompson και Rob Pike.
