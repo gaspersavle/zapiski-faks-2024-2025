@@ -268,4 +268,11 @@ $$y(t_1) = U_0 \mathbb{R}[G(j\omega_0)] \rightarrow \mathbb{R}[G(j\omega_0)]$$
   $$y(t) = U_0 |G(j\omega_0)| \cos[\omega_0 t + \varphi(\omega_0)] \quad \text{for} \ t > t_{\text{transient}}$$
 
 - Auto-correlation of $u$ and *cross-correlation* between $u$ and $y$ are:$$\varphi_{uu}(\tau) = \mathbb{E}\{ u(t)u(t + \tau) \} = \lim_{T_i \to \infty} \frac{1}{T_i} \int_0^{T_i} u(t) u(t + \tau) \, dt$$$$\varphi_{uy}(\tau) = \mathbb{E}\{ u(t) y(t + \tau) \} = \lim_{T_i \to \infty} \frac{1}{T_i} \int_0^{T_i} u(t) y(t + \tau) \, dt$$
-- 
+- The estimates of auto-correlation and cross-correlation are *obtained by integrating periodic functions* over *integer number of periods*:
+
+  $$\hat{\varphi}_{uu}(\tau) = \frac{1}{n_{tp}} \int_0^{n_{tp}} u(t + \tau) \, dt = \frac{1}{n_{tp}} \int_0^{n_{tp}} U_0 \cos(\omega_0 t) U_0 \cos[\omega_0 (t + \tau)] \, dt = \frac{U_0^2}{2} \cos(\omega_0 \tau)$$
+
+  $$\hat{\varphi}_{uy}(\tau) = \frac{1}{n_{tp}} \int_0^{n_{tp}} u(t) y(t + \tau) \, dt = \frac{1}{n_{tp}} \int_0^{n_{tp}} U_0 \cos(\omega_0 t) U_0 |G(j\omega_0)| \cos[\omega_0 (t + \tau) + \varphi(\omega_0)] \, dt$$
+
+  $$= \frac{U_0^2}{2} |G(j\omega_0)| \cos[\omega_0 \tau + \varphi(\omega_0)]$$
+  #TODO 189-193
